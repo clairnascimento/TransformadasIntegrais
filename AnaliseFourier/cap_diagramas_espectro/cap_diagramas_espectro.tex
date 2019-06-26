@@ -11,13 +11,13 @@ onde $w_n=\frac{2\pi n}{T}$, $A_n$ são constantes não negativas chamadas de am
 \end{equation}
 com $a=w_n t$ e $b=\theta_n$. Assim temos:
 \begin{eqnarray*}
-f(t)&=&A_0+\sum_{n=1}^\infty A_n\cos(w_n t-\theta_n)\\
-&=&A_0+\sum_{n=1}^\infty A_n\left[\cos(w_n t)\cos(\theta_n)+\sen(w_n t)\sen(\theta_n)\right]\\
-&=&\underbrace{A_0}_{a_0/2}+\sum_{n=1}^\infty[ \underbrace{A_n\cos(\theta_n)}_{a_n} \cos(w_n t)+\underbrace{A_n\sen(\theta_n)}_{b_n}\sen(w_n t)]
+f(t)&=&\displaystyle A_0+\sum_{n=1}^\infty A_n\cos(w_n t-\theta_n)\\
+&=& \displaystyle A_0+\sum_{n=1}^\infty A_n\left[\cos(w_n t)\cos(\theta_n)+\sen(w_n t)\sen(\theta_n)\right]\\
+&=&\displaystyle \underbrace{A_0}_{a_0/2}+\sum_{n=1}^\infty[ \underbrace{A_n\cos(\theta_n)}_{a_n} \cos(w_n t)+\underbrace{A_n\sen(\theta_n)}_{b_n}\sen(w_n t)]
 \end{eqnarray*}
 Comparando os termos da representação trigonométrica, temos que:
 \begin{eqnarray*}
-\frac{a_0}{2}&=&A_0\\
+\displaystyle \frac{a_0}{2}&=&A_0\\
 a_n&=&A_n\cos(\theta_n)\\
 b_n&=&A_n\sen(\theta_n)\\
 \end{eqnarray*}
@@ -43,13 +43,13 @@ Observe que sempre é possível converter uma forma na outra e os ângulos de fa
 \end{figure}
 Os coeficientes de Fourier são dados por 
 \begin{eqnarray*}
-\frac{a_0}{2}&=&\frac{1}{4}\int_0^4f(t)dt=\frac{1}{4}\int_0^1 1 dt=\frac{1}{4}\\[10pt]
+\displaystyle \frac{a_0}{2}&=&\frac{1}{4}\int_0^4f(t)dt=\frac{1}{4}\int_0^1 1 dt=\frac{1}{4}\\[10pt]
 \end{eqnarray*}
 \begin{eqnarray*}
-a_n&=&\frac{2}{4}\int_0^4f(t)\cos(w_n t)dt=\frac{1}{2}\int_0^1\cos\left(\frac{\pi n}{2} t\right)dt\\&=&\frac{1}{\pi n}\left[\sen\left(\frac{\pi n}{2} t\right)\right]_0^1\\&=&\left\{\begin{array}{ll} 0,&n\ \hbox{par}\\[8pt]\frac{1}{\pi n}(-1)^{\frac{n-1}{2}}&n\ \hbox{ímpar}  \end{array}\right.
+\displaystyle a_n&=&\frac{2}{4}\int_0^4f(t)\cos(w_n t)dt=\frac{1}{2}\int_0^1\cos\left(\frac{\pi n}{2} t\right)dt\\&=&\frac{1}{\pi n}\left[\sen\left(\frac{\pi n}{2} t\right)\right]_0^1\\&=&\left\{\begin{array}{ll} 0,&n\ \hbox{par}\\[8pt]\frac{1}{\pi n}(-1)^{\frac{n-1}{2}}&n\ \hbox{ímpar}  \end{array}\right.
 \end{eqnarray*}
 \begin{eqnarray*}
-b_n&=&\frac{2}{4}\int_0^4f(t)\sen(w_n t)dt=\frac{1}{2}\int_0^1\sen\left(\frac{\pi n}{2} t\right)dt\\&=&\frac{1}{\pi n}\left[-\cos\left(\frac{\pi n}{2} t\right)\right]_0^1\\&=&\left\{\begin{array}{ll} \frac{1}{\pi n},&n\ \hbox{ímpar}\\[8pt] \frac{1}{\pi n}\left(1-(-1)^{\frac{n}{2}}\right)&n\ \hbox{par}  \end{array}\right.\\
+\displaystyle b_n&=&\frac{2}{4}\int_0^4f(t)\sen(w_n t)dt=\frac{1}{2}\int_0^1\sen\left(\frac{\pi n}{2} t\right)dt\\&=&\frac{1}{\pi n}\left[-\cos\left(\frac{\pi n}{2} t\right)\right]_0^1\\&=&\left\{\begin{array}{ll} \frac{1}{\pi n},&n\ \hbox{ímpar}\\[8pt] \frac{1}{\pi n}\left(1-(-1)^{\frac{n}{2}}\right)&n\ \hbox{par}  \end{array}\right.\\
 \end{eqnarray*}
 \begin{table}[ht] 
 \begin{center}
@@ -87,7 +87,7 @@ b_n&=&\frac{2}{4}\int_0^4f(t)\sen(w_n t)dt=\frac{1}{2}\int_0^1\sen\left(\frac{\p
 \end{table}
 Para escrever a forma harmônica da série de Fourier da função $f(t)$ calculamos as amplitudes $A_n$ e as fases $\theta_n$. Para $n=0$, temos $a_0=\frac{1}{2}$ e, portanto, $A_0=\frac{a_0}{2}=\frac{1}{4}$. Para $n=1$, temos $a_1=b_1=\frac{1}{\pi}$ e, consequentemente, $A_1=\sqrt{\frac{1}{\pi^2}+\frac{1}{\pi^2}}=\frac{\sqrt{2}}{\pi}$ e $\theta_1=\frac{\pi}{4}$. Os cálculos foram repetidos de forma análoga para $n=2,\ 3,\ 4$ e $5$ e apresentados na tabela \ref{tab_exponential_form}. Portanto,
 \begin{eqnarray*}
-f(t)&=&\frac{1}{4}+\frac{1}{\pi}\left[\sqrt{2}\cos\left(\frac{\pi }{2} t-\frac{\pi}{4}\right)+\cos\left(\pi  t-\frac{\pi}{2}\right)+\right.\\&+&\left.\frac{\sqrt{2}}{3}\cos\left(\frac{3 \pi }{2} t-\frac{3\pi}{4}\right)+\frac{\sqrt{2}}{5}\cos\left(\frac{5 \pi }{2} t-\frac{\pi }{4}\right)+\cdots   \right]
+f(t)&=&\displaystyle \frac{1}{4}+\frac{1}{\pi}\left[\sqrt{2}\cos\left(\frac{\pi }{2} t-\frac{\pi}{4}\right)+\cos\left(\pi  t-\frac{\pi}{2}\right)+\right.\\&+&\left.\frac{\sqrt{2}}{3}\cos\left(\frac{3 \pi }{2} t-\frac{3\pi}{4}\right)+\frac{\sqrt{2}}{5}\cos\left(\frac{5 \pi }{2} t-\frac{\pi }{4}\right)+\cdots   \right]
 \end{eqnarray*}
 
 \end{ex}
